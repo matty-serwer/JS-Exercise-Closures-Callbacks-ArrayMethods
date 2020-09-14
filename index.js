@@ -144,7 +144,15 @@ function scoreboard(getInningScore, inning, numInnings) {
 }
 
 let getInningScore = function (home, away, thisInning) {
-  return `Inning ${thisInning + 1}: ${away} - ${home}\n`;
+  if(thisInning === 0) {
+      return `1st inning ${thisInning + 1}: ${away} - ${home}\n`;
+  } else if(thisInning === 1){
+    return `2nd inning ${thisInning + 1}: ${away} - ${home}\n`;
+  } else if(thisInning === 2){
+    return `3rd inning ${thisInning + 1}: ${away} - ${home}\n`;
+  } else if(thisInning >= 3){
+    return `${thisInning + 1}th inning ${thisInning + 1}: ${away} - ${home}\n`;
+  }
 };
 
 console.log(scoreboard(getInningScore, inning, 9));
