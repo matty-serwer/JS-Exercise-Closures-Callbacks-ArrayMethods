@@ -73,7 +73,7 @@ b. Compare and contrast calling `dansRoll` the first and second time. What is al
 The name Dan will stay the same, so the 'name' variable has the same value. The variable newRoll's value will change.
 
 c. What is the lexical scope of `newRoll`? 
-The lexical scope of newRoll includes the anonymous function that it is declared in, and then reaches out to the greater function scope.
+The lexical scope of newRoll is limited to the anonymous function that it is declared in.
 
 ### Task 3 - Stretch Goals
 
@@ -90,6 +90,8 @@ See if you can complete one or more of the following challenges:
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
+
+b gets out because its global when assigned without a declaration;
 
 2. Write a function that would allow you to do this using a closure. (This is another interview question we've seen before - when you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions)).
 
