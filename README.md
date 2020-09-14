@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure gives a nested function access to variables in the greater scope of its parent function. This occurs when the nested function does not define the variable itself, it will look to the outer scope for the variable.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,15 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+closure is used here "console.log(`${name} rolled a ${newRoll}`)" when the variable name is called upon. the anonymous function does not define a variable 'name', so the variable 'name' that is passed into personalDice is used
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The name Dan will stay the same, so the 'name' variable has the same value. The variable newRoll's value will change.
+
 c. What is the lexical scope of `newRoll`? 
+The lexical scope of newRoll includes the anonymous function that it is declared in, and then reaches out to the greater function scope.
 
 ### Task 3 - Stretch Goals
 
