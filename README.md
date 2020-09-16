@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure gives a nested function access to variables in the greater scope of its parent function. This occurs when the nested function does not define the variable itself, it will look to the outer scope for the variable.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,15 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+closure is used here "console.log(`${name} rolled a ${newRoll}`)" when the variable name is called upon. the anonymous function does not define a variable 'name', so the variable 'name' that is passed into personalDice is used
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The name Dan will stay the same, so the 'name' variable has the same value. The variable newRoll's value will change.
+
 c. What is the lexical scope of `newRoll`? 
+The lexical scope of newRoll is limited to the anonymous function that it is declared in.
 
 ### Task 3 - Stretch Goals
 
@@ -82,6 +91,8 @@ console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
 
+b gets out because its global when assigned without a declaration;
+
 2. Write a function that would allow you to do this using a closure. (This is another interview question we've seen before - when you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions)).
 
 ```js
@@ -92,6 +103,7 @@ addSix(21); // returns 27
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
 
+Object oriented programming is more prone to have better organization. In functional programming everything might have its own name, rather than being a new version of an object. Functional is less destructive, because you need a new variable for each instance of something. This can be tedious however, and maybe more difficult to navigate the data. I think.
 
 
 ## Resources
